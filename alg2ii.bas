@@ -1,0 +1,12 @@
+DEFINT A-Z
+SCREEN 12
+LINE (100, 0)-(100, 200), 14
+LINE (0, 100)-(200, 100), 14
+FOR x = -10 TO 10
+ FOR y = -100 TO 100
+  IF x = CINT(SIN(y / 10) * 10) THEN
+   PSET (x + 100, 100 - y)
+  END IF
+ NEXT
+NEXT
+
